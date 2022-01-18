@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
+import 'get_started_page.dart';
+
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
   @override
@@ -81,7 +83,13 @@ class _LoginPageState extends State<LoginPage> {
                       primary: Colors.teal[300],
                       textStyle: const TextStyle(fontSize: 20),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const GetStartedPage()),
+                  );
+                    },
                     child: const Text("Sign In",
                         style: TextStyle(
                             fontSize: 20,
